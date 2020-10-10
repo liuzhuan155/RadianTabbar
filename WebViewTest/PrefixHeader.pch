@@ -1,0 +1,45 @@
+//
+//  PrefixHeader.pch
+//  WebViewTest
+//
+//  Created by 刘转 on 2019/3/4.
+//  Copyright © 2019年 刘转. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+/**
+ * 随机色
+ */
+#define lz_RandomColor [UIColor colorWithHue:(arc4random() % (256) / (256.0)) saturation:(arc4random() % (128) / (256.0)) + (0.5) brightness:(arc4random() % (128) / (256.0)) + (0.5) alpha:(1)]
+/**
+ *  UIScreen width.
+ */
+#define  lz_screenWidth   [UIScreen mainScreen].bounds.size.width
+
+/**
+ *  UIScreen height.
+ */
+#define  lz_screenHeight  [UIScreen mainScreen].bounds.size.height
+
+/**iPhone6为标准，乘以宽的比例*/
+#define lz_scaleX_px(value) (((value) * 0.5f)/(375.f) * lz_screenWidth)
+/**iPhone6为标准，乘以高的比例*/
+#define lz_scaleY_px(value) (((value) * 0.5f)/(667.f) * lz_screenHeight)
+/**直接使用像素*/
+#define lz_px(value) ((value) * 0.5f)
+
+/**iPhone6为标准，乘以宽的比例*/
+#define lz_scaleX_pt(value) ((value)/(375.f) * lz_screenWidth)
+/**iPhone6为标准，乘以高的比例*/
+#define lz_scaleY_pt(value) ((value)/(667.f) * lz_screenHeight)
+/**直接使用点*/
+#define lz_pt(value) ((value) * 0.5f)
+
+#define  lz_statusBarHeight      [[UIApplication sharedApplication] statusBarFrame].size.height
+#define  lz_navigationBarHeight   (lz_statusBarHeight + 44.f)
+#import "TabBarConst.h"
+#endif /* PrefixHeader_pch */
