@@ -1,0 +1,77 @@
+<html>
+    <!--描述网页信息-->
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>小黄</title>
+ 		<style >
+            .btn{height:40px; width:60%; padding: 0px 30px; background-color: #0071E7; border: solid 1px #0071E7; border-radius:5px; font-size: 1.2em; color: white}
+ 		</style>
+        
+        <script type="text/javascript">
+         
+            
+            //提供给OC调用JS的方法列表
+            MyJSTest.testWithFuncParam(function (data){
+                                       alert("Data from testWithFuncParam: " + data);
+<!--                                       alert(data)-->
+                                       return "some data";
+                                       });
+                                       
+                                       
+                                       MyJSTest.testWithFuncParam2(function (data){
+                                                                   alert("Data from testWithFuncParam2: " + data);
+                                                                   });
+        
+        
+            //JS响应方法列表
+            function btnClick1() {
+          
+                MyJSTest.alertMsg("小红手机号:13333632513");
+           
+            }
+        
+            function btnClick2() {
+             
+                MyJSTest.callPhoneAction("13333632513");
+         
+            }
+        
+            function btnClick3() {
+           
+                MyJSTest.sendMessageAction("13333632513");
+                
+          
+            }
+
+        </script>
+        
+        
+    </head>
+
+    <!--网页具体内容-->
+    <body>
+        <br/><br/>
+
+		<div>
+			<label>小黄：13300001111</label>
+		</div>
+		<br/><br/>
+
+
+		<div>
+			<button class="btn" type="button" onclick="btnClick1()">小红的手机号</button>
+		</div>
+		<br/>
+
+		<div>
+			<button class="btn" type="button" onclick="btnClick2()">打电话给小红</button>
+		</div>
+		<br/>
+
+		<div>
+			<button class="btn" type="button" onclick="btnClick3()">发短信给小红</button>
+		</div>
+
+
+    </body>
+</html>
