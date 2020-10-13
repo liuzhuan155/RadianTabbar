@@ -9,6 +9,7 @@
 #import "LZTabBarVC.h"
 #import "LZCustomTabbar.h"
 #import "ViewController.h"
+#import "UIImage+LZScaleToSize.h"
 
 @interface LZTabBarVC ()
 
@@ -19,8 +20,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-  
-     [self initUI];
+    // 隐藏tabbar黑色线条
+           //去掉顶部黑线
+         if (@available(iOS 13.0, *))  {
+             UITabBarAppearance* tabbarAppearance =self.tabBar.standardAppearance;
+              tabbarAppearance.backgroundImage = [UIImage imageWithColor:tabbarBackColor];
+             tabbarAppearance.shadowImage = [UIImage imageWithColor:tabbarBackColor];
+             self.tabBar.standardAppearance = tabbarAppearance;;
+         }else{
+             self.tabBar.backgroundImage = [UIImage new];
+             self.tabBar.shadowImage = [UIImage new];
+         }
+       self.tabBar.backgroundColor = tabbarBackColor;
+    self.tabBar.barTintColor = tabbarBackColor;
+       [self.tabBar setTranslucent:NO];
+       [self.tabBar setUnselectedItemTintColor:[UIColor lightGrayColor]];
+       [self.tabBar setTintColor:[UIColor blackColor]];
+       [self initUI];
 }
 - (void)initUI
 {
@@ -59,8 +75,11 @@
     //第5个控制器
     UIViewController * vc5 = [[UIViewController alloc] init];
     vc5.view.backgroundColor = [UIColor whiteColor];
-    vc5.title = @"";
+    vc5.navigationItem.title = @"中间";
     UINavigationController * NC5 = [[UINavigationController alloc] initWithRootViewController:vc5];
+//    UINavigationController * NC5 = [self addChildVc:vc5 title:@"中间" image:@"tabBar_publish_icon" selectedImage:@"tabBar_publish_icon"];
+    
+    
      self.viewControllers = @[NC1,NC2,NC5,NC3,NC4];
 }
 #pragma mark - 添加子控制器  设置图片
@@ -76,10 +95,10 @@
 {
     // 设置子控制器的文字
     childVc.title = title; // 同时设置tabbar和navigationBar的文字
-    
+
     // 设置子控制器的图片
-    childVc.tabBarItem.image = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    childVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    childVc.tabBarItem.image = [[UIImage originImage:[UIImage imageNamed:image]  scaleToSize:CGSizeMake(tabbarItemImageHeight, tabbarItemImageHeight)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    childVc.tabBarItem.selectedImage = [[UIImage originImage:[[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] scaleToSize:CGSizeMake(tabbarItemImageHeight, tabbarItemImageHeight)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     //未选中字体颜色  system为系统字体
     [childVc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor],NSFontAttributeName:[UIFont fontWithName:nil size:13]} forState:UIControlStateNormal];
     
@@ -101,8 +120,9 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
  
-    [LZCustomTabbar setTabBarUI:self.tabBar.subviews tabBar:self.tabBar topLineColor:[UIColor lightGrayColor] backgroundColor:self.tabBar.barTintColor];
+    [LZCustomTabbar setTabBarUI:self.tabBar.subviews tabBar:self.tabBar topLineColor:TopLineColor backgroundColor:self.tabBar.barTintColor];
 }
+
 /*
 #pragma mark - Navigation
 

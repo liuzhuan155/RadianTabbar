@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  @return 返回改变大小后图片
  */
 + (UIImage*) originImage:(UIImage*)image scaleToSize:(CGSize)size;
-
++(UIImage*)imageWithColor:(UIColor*)color;
 @end
 
 NS_ASSUME_NONNULL_END

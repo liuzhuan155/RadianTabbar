@@ -45,8 +45,8 @@ static inline BOOL isIPhoneXSeries() {
     if (_button == nil)
     {
         
-        UIImage *normalImage = [UIImage originImage:[UIImage imageNamed:@"tabBar_publish_icon"] scaleToSize:CGSizeMake(60, 60)];
-        UIImage *selectedImage = [UIImage originImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] scaleToSize:CGSizeMake(60, 60)];
+        UIImage *normalImage = [UIImage originImage:[UIImage imageNamed:centerItemImage] scaleToSize:CGSizeMake(60, 60)];
+        UIImage *selectedImage = [UIImage originImage:[UIImage imageNamed:centerItemImage] scaleToSize:CGSizeMake(60, 60)];
         UIButton * button = [[UIButton alloc] init];
         [button setImage:selectedImage forState:UIControlStateSelected];
         [button setImage:normalImage forState:UIControlStateNormal];
@@ -96,7 +96,7 @@ static inline BOOL isIPhoneXSeries() {
         }
     }
     self.button.frame = CGRectMake(0, 0, itemW, itemW);
-    self.button.center = CGPointMake(self.width/2.0, (self.height - 15 - lz_safeBottomMargin)/2.0);
+    self.button.center = CGPointMake(self.width/2.0, (self.height - 10 - lz_safeBottomMargin)/2.0);
 }
 //判断点是否在响应范围
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {

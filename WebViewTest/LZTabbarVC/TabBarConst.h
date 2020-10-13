@@ -17,5 +17,26 @@
  圆弧宽度
  */
 #define  lz_tabbarSpacewidth 120
+/**
+ 顶部线条颜色
+ */
+#define TopLineColor  [UIColor lightGrayColor]
+/**
+ tabbar  背景色
+ */
+#define tabbarBackColor  [UIColor whiteColor]
+/**
+ 中间tabbarItem图片
+ */
+#define centerItemImage  @"tabBar_publish_icon"
+/**
+ 中间tabbarItem title
+ */
+#define centerItemTitle  @"中间"
+
+/**
+ tabbarItemImageHeight 高度
+ */
+#define tabbarItemImageHeight  35
 
 #endif /* TabBarConst_h */
