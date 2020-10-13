@@ -119,7 +119,7 @@ static inline BOOL isIPhoneXSeries() {
             
             NSLog(@"++++++++++%@",@"存在");
             if ([obj viewWithTag:999] == nil) {
-                UIView * top = [[UIView alloc] initWithFrame:CGRectMake(0, -lz_tabbarSpaceitem, tabBar.bounds.size.width, lz_tabbarSpaceitem)];
+                UIView * top = [[UIView alloc] initWithFrame:CGRectMake(0, -lz_tabbarSpaceitem, obj.bounds.size.width, lz_tabbarSpaceitem)];
                 top.userInteractionEnabled = NO;
                 top.backgroundColor = [UIColor clearColor];
                 top.tag = 999;

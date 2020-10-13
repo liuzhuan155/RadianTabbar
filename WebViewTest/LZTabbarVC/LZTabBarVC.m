@@ -37,6 +37,7 @@
        [self.tabBar setUnselectedItemTintColor:[UIColor lightGrayColor]];
        [self.tabBar setTintColor:[UIColor blackColor]];
        [self initUI];
+   
 }
 - (void)initUI
 {
