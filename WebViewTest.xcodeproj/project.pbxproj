@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F9D94D025411F6E00E86CEC /* MainTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D94CF25411F6E00E86CEC /* MainTabbarViewController.m */; };
 		4E5D5057222CC4F0005F4419 /* LZCustomTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D5056222CC4F0005F4419 /* LZCustomTabbar.m */; };
 		4E5D505B222CC657005F4419 /* UIImage+LZScaleToSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D505A222CC657005F4419 /* UIImage+LZScaleToSize.m */; };
 		4E5D505E222CC713005F4419 /* UIView + LZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D505C222CC713005F4419 /* UIView + LZExtension.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F9D94CE25411F6E00E86CEC /* MainTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabbarViewController.h; sourceTree = "<group>"; };
+		1F9D94CF25411F6E00E86CEC /* MainTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabbarViewController.m; sourceTree = "<group>"; };
 		4E5D5055222CC4F0005F4419 /* LZCustomTabbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZCustomTabbar.h; sourceTree = "<group>"; };
 		4E5D5056222CC4F0005F4419 /* LZCustomTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZCustomTabbar.m; sourceTree = "<group>"; };
 		4E5D5059222CC657005F4419 /* UIImage+LZScaleToSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+LZScaleToSize.h"; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				4E5D5054222CC4DA005F4419 /* LZTabbarVC */,
 				4EAAECFB22262F8200FADDDD /* AppDelegate.h */,
 				4EAAECFC22262F8200FADDDD /* AppDelegate.m */,
+				1F9D94CE25411F6E00E86CEC /* MainTabbarViewController.h */,
+				1F9D94CF25411F6E00E86CEC /* MainTabbarViewController.m */,
 				4EAAED2A22265B8100FADDDD /* Helper.h */,
 				4EAAED2B22265B8100FADDDD /* Helper.m */,
 				4EAAECFE22262F8200FADDDD /* ViewController.h */,
@@ -188,6 +193,7 @@
 				4EAAED0022262F8200FADDDD /* ViewController.m in Sources */,
 				4E5D5061222CC987005F4419 /* LZTabBarVC.m in Sources */,
 				4E5D505B222CC657005F4419 /* UIImage+LZScaleToSize.m in Sources */,
+				1F9D94D025411F6E00E86CEC /* MainTabbarViewController.m in Sources */,
 				4EAAED0622262F8200FADDDD /* WebViewTest.xcdatamodeld in Sources */,
 				4EAAED0E22262F8400FADDDD /* main.m in Sources */,
 				4E5D5057222CC4F0005F4419 /* LZCustomTabbar.m in Sources */,

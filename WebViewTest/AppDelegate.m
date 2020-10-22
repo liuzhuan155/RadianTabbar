@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "LZTabBarVC.h"
+#import "MainTabbarViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    LZTabBarVC *tbc = [[LZTabBarVC alloc] init];
+    MainTabbarViewController *tbc = [[MainTabbarViewController alloc] init];
     self.window.rootViewController = tbc;
     [self.window makeKeyAndVisible];
     return YES;

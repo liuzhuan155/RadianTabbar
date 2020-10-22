@@ -11,7 +11,16 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LZTabBarVC : UITabBarController
-
+#pragma mark - 添加子控制器  设置图片
+/**
+ *  添加一个子控制器
+ *
+ *  @param childVc       子控制器
+ *  @param title         标题
+ *  @param image         图片
+ *  @param selectedImage 选中的图片
+ */
+- (UINavigationController*)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage;
 @end
 
 NS_ASSUME_NONNULL_END

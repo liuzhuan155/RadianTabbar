@@ -79,22 +79,7 @@ static inline BOOL isIPhoneXSeries() {
     [super layoutSubviews];
     
 //    int index = 0;
-    CGFloat itemW = self.width/5.0;
-    
-    for (UIView *subviews in self.subviews)
-    {
-        //取到系统tabbar的Item方法
-        if ([@"UITabBarButton" isEqualToString:NSStringFromClass(subviews.class)])
-        {
-//            subviews.left = index * itemW;
-//            subviews.width = itemW;
-//            if (index >= 2)
-//            {
-//                subviews.left +=itemW;
-//            }
-//            index++;
-        }
-    }
+    CGFloat itemW = self.width/[self.items count];
     self.button.frame = CGRectMake(0, 0, itemW, itemW);
     self.button.center = CGPointMake(self.width/2.0, (self.height - 10 - lz_safeBottomMargin)/2.0);
 }

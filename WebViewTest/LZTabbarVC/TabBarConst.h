@@ -18,7 +18,7 @@
  */
 #define  lz_tabbarSpacewidth 120
 /**
- 顶部线条颜色
+ tabbar顶部线条颜色
  */
 #define TopLineColor  [UIColor lightGrayColor]
 /**
@@ -35,8 +35,11 @@
 #define centerItemTitle  @"中间"
 
 /**
- tabbarItemImageHeight 高度
+ tabbarItemImageHeight  item图片高度
  */
 #define tabbarItemImageHeight  35
-
+/**
+ tabbarItemImageHeight  item图片宽度
+ */
+#define tabbarItemImageWidth  35
 #endif /* TabBarConst_h */
