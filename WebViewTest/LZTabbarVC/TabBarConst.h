@@ -12,7 +12,7 @@
 /**
  圆弧高度
  */
-#define  lz_tabbarSpaceitem 22
+#define  lz_tabbarSpaceitem 20
 /**
  圆弧宽度
  */
@@ -28,7 +28,7 @@
 /**
  中间tabbarItem图片
  */
-#define centerItemImage  @"tabBar_publish_icon"
+#define centerItemImage  @"tabBar_new_click_icon"
 /**
  中间tabbarItem title
  */
